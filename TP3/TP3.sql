@@ -15,7 +15,6 @@ USE HistoriqueClientsTP3;
 #SELECT * FROM Paiements INNER JOIN Clients ON Clients.ID_Client=Paiements.RefClient WHERE Nom = "TARISSE" AND Prenom = "Carine";
 #DELETE FROM Paiements WHERE DateP='2016-07-24' AND RefClient=(SELECT ID_Client FROM Clients WHERE Nom="TARISSE" AND Prenom="Carine");
 
-
 ## Question 2 ##
 
 CREATE TABLE IF NOT EXISTS ArchiveFactures(
