@@ -1,5 +1,7 @@
 ############################################### TP1 ########################################################
 
+## Question 1 ##
+
 CREATE DATABASE IF NOT EXISTS HistoriqueClients;
 USE HistoriqueClients;
 
@@ -17,13 +19,18 @@ RefClient INT,
 Montant INT,
 Paiement TEXT(10));
 
-ALTER TABLE Paiements
-ADD FOREIGN KEY (RefClient) REFERENCES Clients(ID_Client);
+## Question 3 ##
+
+ALTER TABLE Paiements ADD FOREIGN KEY (RefClient) REFERENCES Clients(ID_Client);
+
+## Question 4 ##
 
 #ALTER TABLE Clients ADD Telephone INT;
 #ALTER TABLE Paiements ADD Commentaire TEXT(100);
 
-#SELECT Nom, Prenom FROM Clients;
-#SELECT DISTINCT Ville FROM Clients ORDER BY Ville ASC; # ASC = croissant et DESC decroissant
-#SELECT * FROM Paiements WHERE Paiement = 'NON' ORDER BY DateP DESC;
-#SELECT * FROM Clients WHERE Ville = "Paris";
+## Question 5 ##
+
+SELECT Nom, Prenom FROM Clients;
+SELECT DISTINCT Ville FROM Clients ORDER BY Ville ASC; # ASC = croissant et DESC = decroissant
+SELECT * FROM Paiements WHERE Paiement = 'NON' ORDER BY DateP DESC;
+SELECT * FROM Clients WHERE Ville = "Paris";
