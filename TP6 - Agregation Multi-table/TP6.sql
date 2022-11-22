@@ -33,5 +33,3 @@ SELECT Société, SUM(Quantité*PU) FROM Clients,Commandes, Détails_commandes W
 AND YEAR(Date_commande) = 2019 GROUP BY Société HAVING SUM(Quantité*PU)>3000;
 
 SELECT Société, COUNT(*) FROM Clients, Commandes WHERE Codeclient = Refclient GROUP BY Société HAVING COUNT(*)<5 ;
-
-
